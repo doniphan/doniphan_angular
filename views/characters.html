@@ -1,0 +1,32 @@
+<div class="row">
+<h2>Characters</h2>
+<div class="col-lg-12">
+<div class='uil-spin-css' id="loading" style='-webkit-transform:scale(0.6); display:none;'><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div>
+
+</div>
+<div class="col-sm-4" ng-repeat="character in section.characters.data | limitTo: 20">
+	<div class="box box-danger " >
+		<div class="box-content">
+		<div class="box-header">
+			<h3 class="box-title">{{character.name}}</h3>
+			<h5>House: {{character.house}}</h5>
+			<h5>Titles:</h5>
+			<ul>
+				<li ng-repeat="title in character.titles">{{title}}</li>
+			</ul>
+			<p ng-show="character.male == true">Gender: Male</p>
+			<p ng-show="character.male == false">Gender: Female</p>
+			<span class="username">Appears in books:
+				<ul>
+					<li ng-repeat="book in character.books">{{book}}</li>
+				</ul>
+				
+			</span>
+		</div>
+		<div class="box-body"></div>
+		<div class="box-footer"></div>
+		</div>
+	</div>
+</div>
+
+</div>
